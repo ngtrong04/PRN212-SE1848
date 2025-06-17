@@ -1,0 +1,42 @@
+﻿<Window x:Class="DaoNguyenTrongWPF.ReportResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DaoNguyenTrongWPF"
+        mc:Ignorable="d"
+        Title="ReportResultWindow" Height="444" Width="974">
+    <Border Margin="14" BorderBrush="#2196F3" BorderThickness="1.5" CornerRadius="10" Background="White">
+        <DockPanel>
+            <!-- Tiêu đề và thời gian lọc -->
+            <StackPanel DockPanel.Dock="Top" Margin="16,12,16,4">
+                <TextBlock Text="Order Report" FontSize="24" FontWeight="Bold" Foreground="#2196F3"/>
+                <TextBlock x:Name="TimeRangeText" FontSize="13" Foreground="Gray" Margin="0,4,0,0"/>
+            </StackPanel>
+            <!-- DataGrid danh sách đơn hàng -->
+            <DataGrid x:Name="OrderGrid" AutoGenerateColumns="False" Margin="16,0,16,0" 
+                      CanUserAddRows="False" IsReadOnly="True"
+                      GridLinesVisibility="All" RowHeight="34"
+                      SelectionMode="Single" SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Order ID" Binding="{Binding OrderID}" Width="80"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding CustomerName}" Width="160"/>
+                    <DataGridTextColumn Header="Employee" Binding="{Binding EmployeeName}" Width="160"/>
+                    <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate, StringFormat=dd/MM/yyyy}" Width="110"/>
+                    <DataGridTextColumn Header="Total Amount" Binding="{Binding TotalAmount, StringFormat=\{0:N0\} đ}" Width="120"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!-- Tổng kết -->
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,16,0">
+                <TextBlock Text="Total Orders: " FontWeight="SemiBold" Margin="0,0,8,0"/>
+                <TextBlock x:Name="TotalOrderText" Margin="0,0,20,0"/>
+                <TextBlock Text="Total Revenue: " FontWeight="SemiBold" Margin="0,0,8,0"/>
+                <TextBlock x:Name="TotalRevenueText"/>
+            </StackPanel>
+            <!-- Nút đóng -->
+            <Button Content="Close" Width="90" Height="34" Click="Close_Click"
+                    DockPanel.Dock="Bottom" Margin="0,10,16,14" HorizontalAlignment="Right"
+                    Background="#2196F3" Foreground="White" FontWeight="Bold"/>
+        </DockPanel>
+    </Border>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="BaiTapCoBanSo2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaiTapCoBanSo2"
+        mc:Ignorable="d"
+        Title="SE1848-DaoNguyenTrong" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="CheckBox Sự Kiện" FontSize="40"/>
+        <Label Content="Bạn thích những gì?" FontSize="20"/>
+        <CheckBox x:Name="chkToanBo" Content="Thích toàn bộ hoạt động" FontSize="20" Checked="chkToanBo_Checked" Unchecked="chkToanBo_Unchecked"/>
+        <StackPanel Margin="20,0">
+            <CheckBox x:Name="chkCongNghe" Content="Thích nghiên cứu công nghệ" FontSize="20" Checked="chkSub_CheckedChanged" Unchecked="chkSub_CheckedChanged" />
+            <CheckBox x:Name="chkDuLich" Content="Thích đi du lịch" FontSize="20" Unchecked="chkSub_CheckedChanged" Checked="chkSub_CheckedChanged" />
+            <CheckBox x:Name="chkDaBong" Content="Thích đá bóng" FontSize="20" Checked="chkSub_CheckedChanged" Unchecked="chkSub_CheckedChanged" />
+            <CheckBox x:Name="chkXemPhim" Content="Thích xem phim" FontSize="20" Checked="chkSub_CheckedChanged" Unchecked="chkSub_CheckedChanged"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
