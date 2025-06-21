@@ -17,5 +17,6 @@ namespace Repositories
         public void UpdateProduct(Product p) => dao.UpdateProduct(p);
         public Product GetProductById(int id) => dao.GetProductById(id);
 
+
     }
 }

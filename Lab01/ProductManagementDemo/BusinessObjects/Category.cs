@@ -13,10 +13,10 @@ namespace BusinessObjects
             Products = new HashSet<Product>();
         }
 
-        public Category(int id, string name)
+        public Category(int catID, string catName)
         {
-            this.CategoryId = id;
-            this.CategoryName = name;
+            this.CategoryId = catID;
+            this.CategoryName = catName;
             
         }
 

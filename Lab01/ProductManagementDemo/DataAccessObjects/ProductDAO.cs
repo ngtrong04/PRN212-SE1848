@@ -30,8 +30,8 @@ namespace DataAccessLayer
         //        using var db = new MyStoreContext();
         //        listProducts = db.Products.ToList();
         //    }
-        //    catch (Exception e) { } 
-        //        return listProducts;          
+        //    catch (Exception e) { }
+        //    return listProducts;
         //}
         public void SaveProduct(Product p)
         {
