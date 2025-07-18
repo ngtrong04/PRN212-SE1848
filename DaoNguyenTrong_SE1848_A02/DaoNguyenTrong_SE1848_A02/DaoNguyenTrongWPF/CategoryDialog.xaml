@@ -1,0 +1,31 @@
+﻿<Window x:Class="DaoNguyenTrongWPF.CategoryDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DaoNguyenTrongWPF"
+        mc:Ignorable="d"
+        Title="Danh mục" Height="500" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Mã danh mục:"/>
+            <TextBox Text="{Binding CategoryId}" Margin="0 0 0 8"/>
+            <Label Content="Tên danh mục:"/>
+            <TextBox Text="{Binding CategoryName}" Margin="0 0 0 8"/>
+            <Label Content="Mô tả:"/>
+            <TextBox Text="{Binding Description}" Margin="0 0 0 8"/>
+
+            <Label Content="Ảnh minh họa:"/>
+            <Image x:Name="CategoryImage" Height="120" Width="120" Margin="0 0 0 8"/>
+            <Button Content="Chọn ảnh..." Width="120" Click="ChoosePicture_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Margin="0 0 10 0" Width="80" Click="Ok_Click"/>
+            <Button Content="Hủy" Width="80" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
